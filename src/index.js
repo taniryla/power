@@ -45,6 +45,9 @@ problems says don't worry about negative bases and exponents
 
 Step Three (Solve). Carry out your plan of the solution and check each one of your steps in pseudocode.
 14.  Can you see clearly that the step is correct?
+ 
+see pseudcode below
+
 
 
 IV. 	Step Four (Check). Examine the solution obtained and refactor. 
@@ -55,3 +58,16 @@ IV. 	Step Four (Check). Examine the solution obtained and refactor.
 19.  Can you make the code DRYer and refactor? 
 20.  Can you improve the performance? 
 21.   How have other people solved this problem?
+
+
+function power (base, exponent){
+  // base case
+  let result = base;
+  if (exponent === 0) return 1;
+  if (exponent === 1) {
+    return base;
+  }
+  result = base * base;
+  // recursion with modified input
+  power(result, exponent--);
+}
