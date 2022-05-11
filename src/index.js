@@ -57,12 +57,6 @@
 
 function power(base, exponent) {
   // base case
-  let result = base;
-  if ((exponent = 0)) return 1;
-  if ((exponent = 1)) {
-    return base;
-  }
-  result = base * base;
-  // recursion with modified input
-  power(result, exponent - 1);
+  if (exponent === 0) return 1;
+  return base * power(base, exponent - 1);
 }
